@@ -26,6 +26,10 @@ function Jobs() {
 
   return (
     <div className="manage-page">
+      <Link to="/" className="back-link">
+        &larr; Back to Home
+      </Link>
+
       <h1>Available Jobs</h1>
       <p style={{ color: "var(--text-light)", marginBottom: "1.5rem" }}>
         Browse active placement opportunities

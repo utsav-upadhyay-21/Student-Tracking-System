@@ -32,7 +32,7 @@ function ManageStudents() {
         phone_number: data.phone_number || "",
         personal_email: data.personal_email || "",
         tenth_marks: data.tenth_marks || "",
-        twelfth_marks: data["twelfth _marks"] || "",
+        twelfth_marks: data.twelfth_marks || "",
         sem1: data.sem1 || "",
         sem2: data.sem2 || "",
         sem3: data.sem3 || "",
@@ -96,7 +96,11 @@ function ManageStudents() {
             </div>
             <div className="form-group">
               <label>CGPA</label>
-              <input value={student.cgpa} disabled />
+              <input
+                name="cgpa"
+                value={formData.cgpa}
+                onChange={handleChange}
+              />
             </div>
           </div>
           <div className="form-row">

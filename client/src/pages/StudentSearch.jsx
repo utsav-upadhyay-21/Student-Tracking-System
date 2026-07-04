@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import api from "../services/api";
 import Loading from "../components/Loading";
 
@@ -31,6 +32,10 @@ function StudentSearch() {
 
   return (
     <div className="manage-page student-search">
+      <Link to="/" className="back-link">
+        &larr; Back to Home
+      </Link>
+
       <h1>Student Search</h1>
 
       <form onSubmit={handleSearch} className="search-form">
