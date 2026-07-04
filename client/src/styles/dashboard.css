@@ -1,0 +1,161 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.login-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.login-card .btn-primary {
+  width: 100%;
+}
+
+.dashboard h1 {
+  margin-bottom: 0.3rem;
+}
+
+.dashboard > p {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.dashboard-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.dashboard-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-card p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.manage-page h1 {
+  margin-bottom: 1rem;
+}
+
+.manage-form {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin: 1rem 0;
+}
+
+.manage-form h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.manage-form .btn-primary {
+  margin-top: 0.5rem;
+}
+
+.manage-list {
+  margin-top: 1rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table th {
+  background: #f1f5f9;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.data-table tr:hover {
+  background: #f8fafc;
+}
+
+.calendar-row {
+  cursor: pointer;
+}
+
+.calendar-row:hover {
+  background: #eff6ff !important;
+}
+
+.sem-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sem-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .data-table {
+    font-size: 0.85rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,42 @@
+import { Link, useNavigate } from "react-router-dom";
+import "../styles/navbar.css";
+
+function Navbar() {
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
+
+  return (
+    <nav className={`navbar ${token ? "navbar-admin" : ""}`}>
+      <Link to="/" className="navbar-logo">
+        Placement Portal
+      </Link>
+      <div className="navbar-links">
+        {token ? (
+          <>
+            <Link to="/">Home</Link>
+            <Link to="/dashboard/jobs">Manage Jobs</Link>
+            <Link to="/dashboard/calendar">Manage Calendar</Link>
+            <Link to="/dashboard/students">Manage Students</Link>
+            <button className="logout-btn" onClick={handleLogout}>
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <Link to="/">Home</Link>
+            <Link to="/jobs">Jobs</Link>
+            <Link to="/calendar">Calendar</Link>
+            <Link to="/student">Student</Link>
+          </>
+        )}
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;
