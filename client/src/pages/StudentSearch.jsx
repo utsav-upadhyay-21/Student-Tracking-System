@@ -36,7 +36,7 @@ function StudentSearch() {
         &larr; Back to Home
       </Link>
 
-      <h1>Student Search</h1>
+      <h1>Verify Your Details</h1>
 
       <form onSubmit={handleSearch} className="search-form">
         <input
