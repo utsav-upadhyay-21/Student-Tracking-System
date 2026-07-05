@@ -7,8 +7,8 @@ const getAllJobs = async (req, res) => {
         const [jobs] = await db.query(`
             SELECT *
             FROM jobs
-            WHERE deadline >= CURDATE()
-            ORDER BY deadline ASC
+            WHERE deadline >= NOW()
+            ORDER BY deadline ASC;
         `);
 
         res.status(200).json(jobs);
@@ -33,6 +33,7 @@ const getJobById = async (req, res) => {
             SELECT *
             FROM jobs
             WHERE id = ?
+            AND deadline >= NOW();
             `,
             [id]
         );

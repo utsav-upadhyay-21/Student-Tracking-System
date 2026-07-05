@@ -6,18 +6,21 @@
 }
 
 .login-card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 2rem;
-  box-shadow: var(--shadow-md);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 3rem 2.5rem;
   width: 100%;
   max-width: 400px;
+  box-shadow: var(--shadow-sm);
 }
 
 .login-card h1 {
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: var(--primary);
+  margin-bottom: 2rem;
+  color: var(--foreground);
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
 }
 
 .login-card .btn-primary {
@@ -26,11 +29,13 @@
 
 .dashboard h1 {
   margin-bottom: 0.3rem;
+  letter-spacing: -0.02em;
 }
 
 .dashboard > p {
-  color: var(--text-light);
-  margin-bottom: 2rem;
+  color: var(--muted-foreground);
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
 }
 
 .dashboard-grid {
@@ -40,50 +45,74 @@
 }
 
 .dashboard-card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
+  border-radius: 8px;
   padding: 2rem;
-  box-shadow: var(--shadow);
   text-decoration: none;
-  color: var(--text);
+  color: var(--foreground);
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 200ms ease-out;
+  box-shadow: var(--shadow-sm);
 }
 
 .dashboard-card:hover {
-  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+  border-color: var(--accent);
 }
 
 .dashboard-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  background: var(--muted);
+  color: var(--accent);
+  transition: all 200ms ease-out;
+}
+
+.dashboard-card:hover .dashboard-icon {
+  background: rgba(184, 134, 11, 0.08);
+  color: var(--accent-secondary);
 }
 
 .dashboard-card h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .dashboard-card p {
-  color: var(--text-light);
-  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  font-size: 0.88rem;
+  line-height: 1.6;
 }
 
 .manage-page h1 {
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .manage-form {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
-  margin: 1rem 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  margin: 1.5rem 0;
 }
 
 .manage-form h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .manage-form .btn-primary {
@@ -91,34 +120,48 @@
 }
 
 .manage-list {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .data-table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
 }
 
 .data-table th,
 .data-table td {
-  padding: 0.8rem 1rem;
+  padding: 0.75rem 1rem;
   text-align: left;
   border-bottom: 1px solid var(--border);
 }
 
 .data-table th {
-  background: #f1f5f9;
-  font-weight: 600;
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  color: var(--foreground);
   font-size: 0.9rem;
-  color: var(--text-light);
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
 }
 
 .data-table tr:hover {
-  background: #f8fafc;
+  background: var(--muted);
 }
 
 .calendar-row {
@@ -126,7 +169,7 @@
 }
 
 .calendar-row:hover {
-  background: #eff6ff !important;
+  background: var(--muted) !important;
 }
 
 .sem-form-grid {
