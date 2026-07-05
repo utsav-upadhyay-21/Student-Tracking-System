@@ -30,9 +30,10 @@
 
 .feature-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  margin: 0 0 4rem;
+  margin: 0 auto 4rem;
+  max-width: 700px;
 }
 
 .feature-card {
@@ -54,10 +55,6 @@
 
 .calendar-feature {
   border-top-color: var(--accent);
-}
-
-.jobs-feature {
-  border-top-color: var(--accent-secondary);
 }
 
 .student-feature {
@@ -107,15 +104,10 @@
   .feature-cards {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    max-width: 400px;
   }
 
   .feature-card {
     padding: 2rem 1.5rem;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .feature-cards {
-    grid-template-columns: repeat(2, 1fr);
   }
 }

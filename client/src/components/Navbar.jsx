@@ -13,13 +13,16 @@ function Navbar() {
   return (
     <nav className={`navbar ${token ? "navbar-admin" : ""}`}>
       <Link to="/" className="navbar-logo">
-        Placement Portal
+        <img
+          src="https://i.ibb.co/qYRq69MV/rvitm-logo.webp"
+          alt="RVITM Placement Portal"
+          className="navbar-logo-img"
+        />
       </Link>
       <div className="navbar-links">
         {token ? (
           <>
             <Link to="/">Home</Link>
-            <Link to="/dashboard/jobs">Manage Jobs</Link>
             <Link to="/dashboard/calendar">Manage Calendar</Link>
             <Link to="/dashboard/students">Manage Students</Link>
             <button className="logout-btn" onClick={handleLogout}>
@@ -29,7 +32,6 @@ function Navbar() {
         ) : (
           <>
             <Link to="/">Home</Link>
-            <Link to="/jobs">Jobs</Link>
             <Link to="/calendar">Calendar</Link>
             <Link to="/student">Student</Link>
           </>

@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5rem;
-  height: 64px;
+  height: 80px;
   background: var(--card);
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -29,12 +29,19 @@
 }
 
 .navbar-logo {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--foreground);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: -0.02em;
+}
+
+.navbar-logo-img {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+
+.navbar-admin .navbar-logo-img {
+  filter: brightness(0) invert(1);
 }
 
 .navbar-links {

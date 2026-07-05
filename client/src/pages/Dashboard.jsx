@@ -14,18 +14,6 @@ function Dashboard() {
       <p>Manage the placement portal</p>
 
       <div className="dashboard-grid">
-        <Link to="/dashboard/jobs" className="dashboard-card">
-          <div className="dashboard-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="2" y="7" width="20" height="14" rx="2" />
-              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-              <line x1="12" y1="12" x2="12" y2="12.01" />
-            </svg>
-          </div>
-          <h2>Manage Jobs</h2>
-          <p>Add, edit, or delete job postings</p>
-        </Link>
-
         <Link to="/dashboard/calendar" className="dashboard-card">
           <div className="dashboard-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

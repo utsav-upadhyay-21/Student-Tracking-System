@@ -58,7 +58,13 @@ function Jobs() {
                   <td>{job.role}</td>
                   <td>{job.package}</td>
                   <td>
-                    {new Date(job.deadline).toLocaleDateString("en-IN")}
+                    {new Date(job.deadline).toLocaleString("en-IN", {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
                   </td>
                   <td>
                     <Link to={`/jobs/${job.id}`} className="btn-edit">

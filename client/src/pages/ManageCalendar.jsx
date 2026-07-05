@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Navigate } from "react-router-dom";
 import api from "../services/api";
 import Loading from "../components/Loading";
@@ -16,6 +16,7 @@ function ManageCalendar() {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState(initialEventState);
   const [editingId, setEditingId] = useState(null);
+  const dateInputRef = useRef(null);
 
   const token = localStorage.getItem("token");
   if (!token) return <Navigate to="/admin/login" replace />;
@@ -117,10 +118,16 @@ function ManageCalendar() {
           <div className="form-group">
             <label>Visit Date *</label>
             <input
+              ref={dateInputRef}
               type="date"
               name="visit_date"
               value={formData.visit_date}
               onChange={handleChange}
+              onFocus={() => {
+                if (dateInputRef.current) {
+                  dateInputRef.current.showPicker();
+                }
+              }}
               required
             />
           </div>

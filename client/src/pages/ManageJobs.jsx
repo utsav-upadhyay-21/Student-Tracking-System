@@ -75,7 +75,7 @@ function ManageJobs() {
       company_name: job.company_name,
       role: job.role,
       package: job.package,
-      deadline: job.deadline ? job.deadline.split("T")[0] : "",
+      deadline: job.deadline ? job.deadline.replace(" ", "T").slice(0, 16) : "",
       work_mode: job.work_mode,
       branch_eligibility: job.branch_eligibility,
       minimum_cgpa: job.minimum_cgpa || "",
@@ -157,7 +157,7 @@ function ManageJobs() {
             <div className="form-group">
               <label>Deadline</label>
               <input
-                type="date"
+                type="datetime-local"
                 name="deadline"
                 value={formData.deadline}
                 onChange={handleChange}
@@ -259,7 +259,13 @@ function ManageJobs() {
                   <td>{job.role}</td>
                   <td>{job.package}</td>
                   <td>
-                    {new Date(job.deadline).toLocaleDateString("en-IN")}
+                    {new Date(job.deadline).toLocaleString("en-IN", {
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
                   </td>
                   <td>
                     <button
