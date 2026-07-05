@@ -375,6 +375,7 @@ h2 { letter-spacing: -0.01em; }
   color: var(--muted-foreground);
   margin-top: 1rem;
   line-height: 1.75;
+  white-space: pre-line;
 }
 
 /* ===== BACK LINK ===== */
